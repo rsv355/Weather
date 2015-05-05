@@ -1,0 +1,13 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    
+    <dimen name="weather_space">150.0dip</dimen>
+    <dimen name="weather_size">25.0sp</dimen>
+     <dimen name="temperature_size">30.0sp</dimen>
+    <dimen name="location_size">35.0sp</dimen>
+    <dimen name="margin_space">5.0dip</dimen>
+
+</resources>

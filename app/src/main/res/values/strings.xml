@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Weather Expert</string>
+    <string name="action_settings">Settings</string>
+    <string name="str_no_data">***</string>
+    <string name="str_humidity">Humidity</string>
+    <string name="str_visi">Visibility</string>
+    <string name="search">Search</string>
+
+</resources>
