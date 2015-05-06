@@ -160,7 +160,7 @@
                 android:layout_weight="1"
                 android:layout_height="wrap_content">
                 <ImageView
-                    android:id="@+id/im4"
+                    android:id="@+id/img4"
                     android:layout_marginBottom="10dp"
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"

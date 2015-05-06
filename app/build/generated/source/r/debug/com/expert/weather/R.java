@@ -58,15 +58,20 @@ public final class R {
         public static final int a9=0x7f020019;
         public static final int background=0x7f02001a;
         public static final int currency=0x7f02001b;
-        public static final int duaseries=0x7f02001c;
-        public static final int kidsbook=0x7f02001d;
-        public static final int locationfinder=0x7f02001e;
-        public static final int otherweather_ic=0x7f02001f;
-        public static final int seachbutton=0x7f020020;
-        public static final int status_weather_clear_icon=0x7f020021;
-        public static final int urduqaida=0x7f020022;
-        public static final int weather_background=0x7f020023;
-        public static final int weather_hot_ic=0x7f020024;
+        public static final int currency1=0x7f02001c;
+        public static final int duaseries=0x7f02001d;
+        public static final int duaseries1=0x7f02001e;
+        public static final int kidsbook=0x7f02001f;
+        public static final int kidsbook1=0x7f020020;
+        public static final int locationfinder=0x7f020021;
+        public static final int locationfinder1=0x7f020022;
+        public static final int otherweather_ic=0x7f020023;
+        public static final int seachbutton=0x7f020024;
+        public static final int status_weather_clear_icon=0x7f020025;
+        public static final int urduqaida=0x7f020026;
+        public static final int urduqaida1=0x7f020027;
+        public static final int weather_background=0x7f020028;
+        public static final int weather_hot_ic=0x7f020029;
     }
     public static final class id {
         public static final int Country=0x7f090002;

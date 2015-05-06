@@ -2,18 +2,11 @@
 <items version="2" >
 
     <item
-        jar="D:\AndroidProjects\Weather\app\libs\GoogleAdMobAdsSdk-6.4.1.jar"
+        jar="C:\Users\Android\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="6262c554ef5744538d526465aa73704810705734">
-        <dex dex="D:\AndroidProjects\Weather\app\build\intermediates\pre-dexed\debug\GoogleAdMobAdsSdk-6.4.1-55c64baeae488d75acd632a0d33b1756dc74f79f.jar" />
-    </item>
-    <item
-        jar="D:\AndroidProjects\Weather\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
-        <dex dex="D:\AndroidProjects\Weather\app\build\intermediates\pre-dexed\debug\classes-0f554b033f81375f4b63ab4b58e90312fa552545.jar" />
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="D:\AndroidProjects\Weather\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-cf9a162d63ab3f14cb857ff231d5d9e3066ac14e.jar" />
     </item>
     <item
         jar="D:\AndroidProjects\Weather\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\jars\libs\internal_impl-21.0.3.jar"
@@ -23,11 +16,18 @@
         <dex dex="D:\AndroidProjects\Weather\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-be1b6b80e4692e9a1d1f0c1ab20e23009aa04d43.jar" />
     </item>
     <item
-        jar="C:\Users\Android\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
+        jar="D:\AndroidProjects\Weather\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\jars\classes.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
-        <dex dex="D:\AndroidProjects\Weather\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-cf9a162d63ab3f14cb857ff231d5d9e3066ac14e.jar" />
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="D:\AndroidProjects\Weather\app\build\intermediates\pre-dexed\debug\classes-0f554b033f81375f4b63ab4b58e90312fa552545.jar" />
+    </item>
+    <item
+        jar="D:\AndroidProjects\Weather\app\libs\GoogleAdMobAdsSdk-6.4.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="6262c554ef5744538d526465aa73704810705734">
+        <dex dex="D:\AndroidProjects\Weather\app\build\intermediates\pre-dexed\debug\GoogleAdMobAdsSdk-6.4.1-55c64baeae488d75acd632a0d33b1756dc74f79f.jar" />
     </item>
 
 </items>
