@@ -97,7 +97,7 @@
                     android:layout_marginBottom="10dp"
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
-                    android:background="@drawable/kidsbook1"
+                    android:background="@drawable/kidsbook48"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <TextView
@@ -120,7 +120,7 @@
                     android:layout_marginBottom="10dp"
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
-                    android:background="@drawable/locationfinder1"
+                    android:background="@drawable/locationfinder48"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <TextView
@@ -142,7 +142,7 @@
                     android:layout_marginBottom="10dp"
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
-                    android:background="@drawable/duaseries1"
+                    android:background="@drawable/duaseries48"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <TextView
@@ -164,7 +164,7 @@
                     android:layout_marginBottom="10dp"
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
-                    android:background="@drawable/currency1"
+                    android:background="@drawable/currency48"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <TextView
@@ -186,7 +186,7 @@
                     android:layout_marginBottom="10dp"
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
-                    android:background="@drawable/urduqaida1"
+                    android:background="@drawable/urduqaida48"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <TextView
