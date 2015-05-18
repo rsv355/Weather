@@ -86,7 +86,7 @@
         android:layout_height="wrap_content">
         <ImageView
             android:id="@+id/Imgbanner"
-            android:background="@drawable/kidsbanner"
+            android:background="@drawable/kidsbookbanner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </LinearLayout>

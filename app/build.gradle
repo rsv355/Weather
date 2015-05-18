@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.expert.weather"
-        minSdkVersion 8
+        minSdkVersion 9
         targetSdkVersion 21
     }
 
@@ -20,5 +20,6 @@ android {
 
 dependencies {
     compile 'com.android.support:support-v4:21.0.3'
-    compile files('libs/GoogleAdMobAdsSdk-6.4.1.jar')
+   // compile files('libs/GoogleAdMobAdsSdk-6.4.1.jar')
+    compile 'com.google.android.gms:play-services:7.0.0'
 }

@@ -12,9 +12,9 @@ import org.w3c.dom.Node;
 import org.xml.sax.SAXException;
 
 import com.expert.weather.R;
-import com.google.ads.AdRequest;
-import com.google.ads.AdSize;
-import com.google.ads.AdView;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -78,13 +78,13 @@ public class Show extends Activity{
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.temp);
-		
-		AdView adView = new AdView(this, AdSize.SMART_BANNER, "ca-app-pub-1878227272753934/3656092808");     
-		adView.setGravity(Gravity.CENTER); 
-		RelativeLayout layout = (RelativeLayout)findViewById(R.id.ad);        
-	    layout.addView(adView);
-	    AdRequest request = new AdRequest();
-	    adView.loadAd(request);
+
+		AdView adView = (AdView) this.findViewById(R.id.adView);
+		// Request for Ads
+		AdRequest adRequest = new AdRequest.Builder().build();
+		// Load ads into Banner Ads
+		adView.loadAd(adRequest);
+		// adview ends
 
 		weather_location = (TextView)findViewById(R.id.location);
 		weather_temp = (TextView)findViewById(R.id.temperature);
