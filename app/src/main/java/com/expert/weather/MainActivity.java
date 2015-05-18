@@ -20,6 +20,9 @@ import com.google.ads.AdRequest;
 import com.google.ads.AdSize;
 import com.google.ads.AdView;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 public class MainActivity extends Activity implements View.OnClickListener{
 
 	private EditText edt;
@@ -27,7 +30,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
 	String url = "http://query.yahooapis.com/v1/public/yql?q=select*from%20geo.places%20where%20text=%22";
 	ProgressDialog pd;
 
-	ImageView img1,img2,img3,img4,img5;
+	ImageView Imgbanner;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -44,21 +47,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
 			edt = (EditText) findViewById(R.id.inputCountry);
 		btn = (Button) findViewById(R.id.btnSearch);
 
-		img1 = (ImageView)findViewById(R.id.img1);
-		img2 = (ImageView)findViewById(R
-				.id.img2);
-		img3 = (ImageView)findViewById(R.id.img3);
-		img4 = (ImageView)findViewById(R.id.img4);
-		img5 = (ImageView)findViewById(R.id.img5);
-
-
-		img1.setOnClickListener(this);
-		img2.setOnClickListener(this);
-		img3.setOnClickListener(this);
-		img4.setOnClickListener(this);
-		img5.setOnClickListener(this);
-
-
+		Imgbanner = (ImageView)findViewById(R.id.Imgbanner);
 
 		btn.setOnClickListener(new View.OnClickListener() {
 			@Override
@@ -99,6 +88,23 @@ public class MainActivity extends Activity implements View.OnClickListener{
 	}
 
 	@Override
+	protected void onResume() {
+		super.onResume();
+
+		Timer timer = new Timer();
+		timer.scheduleAtFixedRate(new TimerTask() {
+			@Override
+			public void run() {
+				changeBackground();
+			}
+		}, 0, 1000 * 10);
+	}
+
+	private void changeBackground(){
+
+	}
+
+	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
@@ -108,7 +114,18 @@ public class MainActivity extends Activity implements View.OnClickListener{
 	public void onClick(View v) {
 		switch (v.getId()){
 
-			case R.id.img1:
+			case R.id.Imgbanner:
+				final String appPackageName = "com.app.kidsbookapp"; // getPackageName() from Context or Activity object
+				try {
+					startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
+				} catch (android.content.ActivityNotFoundException anfe) {
+					startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackageName)));
+				}
+
+
+
+				break;
+			/*case R.id.img1:
 
 				final String appPackageName = "com.app.kidsbookapp"; // getPackageName() from Context or Activity object
 				try {
@@ -155,7 +172,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
 				} catch (android.content.ActivityNotFoundException anfe) {
 					startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackageName5)));
 				}
-				break;
+				break;*/
 		}
 	}
 }
