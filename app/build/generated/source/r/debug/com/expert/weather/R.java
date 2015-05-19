@@ -483,11 +483,9 @@ containing a value of this type.
     public static final class id {
         public static final int Country=0x7f0b0019;
         public static final int Imgbanner=0x7f0b001e;
-        public static final int OtherWeatherInfo=0x7f0b0024;
+        public static final int OtherWeatherInfo=0x7f0b0022;
         public static final int Search=0x7f0b001c;
-        public static final int action_settings=0x7f0b0032;
-        public static final int ad=0x7f0b001f;
-        public static final int ad2=0x7f0b0020;
+        public static final int action_settings=0x7f0b0030;
         public static final int adView=0x7f0b0018;
         public static final int adjust_height=0x7f0b0002;
         public static final int adjust_width=0x7f0b0003;
@@ -497,24 +495,24 @@ containing a value of this type.
         public static final int buy_now=0x7f0b0012;
         public static final int buy_with_google=0x7f0b0013;
         public static final int classic=0x7f0b0015;
-        public static final int dateTime=0x7f0b002b;
-        public static final int dayone_name=0x7f0b002c;
-        public static final int dayone_temp=0x7f0b002d;
-        public static final int daythree_name=0x7f0b0030;
-        public static final int daythree_temp=0x7f0b0031;
-        public static final int daytwo_name=0x7f0b002e;
-        public static final int daytwo_temp=0x7f0b002f;
+        public static final int dateTime=0x7f0b0029;
+        public static final int dayone_name=0x7f0b002a;
+        public static final int dayone_temp=0x7f0b002b;
+        public static final int daythree_name=0x7f0b002e;
+        public static final int daythree_temp=0x7f0b002f;
+        public static final int daytwo_name=0x7f0b002c;
+        public static final int daytwo_temp=0x7f0b002d;
         public static final int donate_with_google=0x7f0b0014;
         public static final int grayscale=0x7f0b0016;
         public static final int hintLocation=0x7f0b001a;
         public static final int holo_dark=0x7f0b0008;
         public static final int holo_light=0x7f0b0009;
-        public static final int humidityLayout=0x7f0b0025;
-        public static final int humidityTitle=0x7f0b0026;
-        public static final int humidityValue=0x7f0b0027;
+        public static final int humidityLayout=0x7f0b0023;
+        public static final int humidityTitle=0x7f0b0024;
+        public static final int humidityValue=0x7f0b0025;
         public static final int hybrid=0x7f0b0004;
         public static final int inputCountry=0x7f0b001b;
-        public static final int location=0x7f0b0021;
+        public static final int location=0x7f0b001f;
         public static final int match_parent=0x7f0b000f;
         public static final int monochrome=0x7f0b0017;
         public static final int none=0x7f0b0000;
@@ -525,12 +523,12 @@ containing a value of this type.
         public static final int selectionDetails=0x7f0b000e;
         public static final int slide=0x7f0b0001;
         public static final int strict_sandbox=0x7f0b000c;
-        public static final int temperature=0x7f0b0023;
+        public static final int temperature=0x7f0b0021;
         public static final int terrain=0x7f0b0007;
-        public static final int visiLayout=0x7f0b0028;
-        public static final int visiTitle=0x7f0b0029;
-        public static final int visiValue=0x7f0b002a;
-        public static final int weather_icon=0x7f0b0022;
+        public static final int visiLayout=0x7f0b0026;
+        public static final int visiTitle=0x7f0b0027;
+        public static final int visiValue=0x7f0b0028;
+        public static final int weather_icon=0x7f0b0020;
         public static final int wrap_content=0x7f0b0010;
     }
     public static final class integer {

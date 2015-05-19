@@ -12,8 +12,10 @@ import org.w3c.dom.Node;
 import org.xml.sax.SAXException;
 
 import com.expert.weather.R;
+import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
 
 
 import android.app.Activity;
@@ -26,6 +28,10 @@ import android.widget.Toast;
 
 
 public class Show extends Activity{
+
+
+	InterstitialAd interstitial;
+	com.google.android.gms.ads.AdRequest adRequest1;
 
 	private TextView weather_location , weather_temp , weather_humidity , weather_visibility,
 	weather_date , dayone_name , dayone_temp , daytwo_name , daytwo_temp , daythree_name ,
@@ -86,6 +92,11 @@ public class Show extends Activity{
 		adView.loadAd(adRequest);
 		// adview ends
 
+		interstitial = new InterstitialAd(Show.this);
+		interstitial.setAdUnitId("ca-app-pub-1878227272753934/8361723600");
+		adRequest1 = new com.google.android.gms.ads.AdRequest.Builder()
+				.build();
+
 		weather_location = (TextView)findViewById(R.id.location);
 		weather_temp = (TextView)findViewById(R.id.temperature);
 		weather_humidity = (TextView)findViewById(R.id.humidityValue);
@@ -123,7 +134,42 @@ public class Show extends Activity{
 		daythree_name.setText(weatherResult.forecastday_three);
 		daythree_temp.setText(weatherResult.forecasthigh_three+(char) 0x00B0+"C");
 
+
+
+
+		runOnUiThread(new Runnable() {
+			@Override
+			public void run() {
+				try {
+					Thread.sleep(5000);
+
+					interstitial.loadAd(adRequest1);
+					// Prepare an Interstitial Ad Listener
+					interstitial.setAdListener(new AdListener() {
+						public void onAdLoaded() {
+							displayInterstitial();
+
+						}
+					});
+
+				} catch (Exception e) {
+
+				}
+			}
+		});
+
 	}
+
+
+
+	public void displayInterstitial() {
+
+		// If Ads are loaded, show Interstitial else show nothing.
+		if (interstitial.isLoaded()) {
+			interstitial.show();
+		}
+	}
+
 	private void setImage(String no) {
 		int ii = Integer.parseInt(no);
 		switch (ii) {

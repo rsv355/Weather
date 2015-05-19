@@ -6,6 +6,8 @@ import android.content.ComponentName;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.media.MediaPlayer;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -26,6 +28,7 @@ import java.util.TimerTask;
 import android.util.Log;
 public class MainActivity extends Activity implements View.OnClickListener{
 
+	String PACKAGE_NAME;
 	private EditText edt;
 	private Button btn;
 	String url = "http://query.yahooapis.com/v1/public/yql?q=select*from%20geo.places%20where%20text=%22";
@@ -60,6 +63,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
 		btn = (Button) findViewById(R.id.btnSearch);
 
 		Imgbanner = (ImageView)findViewById(R.id.Imgbanner);
+		Imgbanner.setOnClickListener(this);
 
 		btn.setOnClickListener(new View.OnClickListener() {
 			@Override
@@ -69,15 +73,6 @@ public class MainActivity extends Activity implements View.OnClickListener{
 				if (s != null) {
 
 					s = s.replaceAll(" ", "");
-
-					interstitial.loadAd(adRequest);
-					// Prepare an Interstitial Ad Listener
-					interstitial.setAdListener(new AdListener() {
-						public void onAdLoaded() {
-							displayInterstitial();
-
-						}
-					});
 
 
 					pd = new ProgressDialog(MainActivity.this);
@@ -126,12 +121,31 @@ public class MainActivity extends Activity implements View.OnClickListener{
 				runOnUiThread(new Runnable() {
 					@Override
 					public void run() {
-						changeBackground();
+						if(checkInternet()) {
+							Imgbanner.setVisibility(View.VISIBLE);
+							changeBackground();
+						}
+						else {
+							Imgbanner.setVisibility(View.GONE);
+						}
 					}
 				});
 
 			}
-		}, 0, 1000 * 10);
+		}, 0, 1000 * 30);
+
+
+	}
+
+
+	private boolean checkInternet(){
+		ConnectivityManager connectivityManager = (ConnectivityManager)getSystemService(MainActivity.this.CONNECTIVITY_SERVICE);
+		if (connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).getState() == NetworkInfo.State.CONNECTED ||
+				connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI).getState() == NetworkInfo.State.CONNECTED) {
+			return true;
+		} else {
+			return false;
+		}
 
 
 	}
@@ -153,23 +167,28 @@ public class MainActivity extends Activity implements View.OnClickListener{
 
 		if(bannerNo == 1){
 			Log.e("On condintion"," 1");
+			PACKAGE_NAME = "com.app.kidsbookapp";
 			Imgbanner.setImageResource(R.drawable.kidsbookbanner);
 			bannerNo += 1;
 		}else if(bannerNo == 2){
 			Log.e("On condintion"," 2");
+			PACKAGE_NAME = "com.app.namesofallah";
 			Imgbanner.setImageResource(R.drawable.namesofallahbanner);
 			bannerNo += 1;
 		}else if(bannerNo == 3){
 			Log.e("On condintion"," 3");
+			PACKAGE_NAME = "com.currencyapp.currencyconverter";
 			Imgbanner.setImageResource(R.drawable.currecnybanner);
 			bannerNo += 1;
 		}else if(bannerNo == 4){
 			Log.e("On condintion"," 4");
+			PACKAGE_NAME = "com.app.urduqaida";
 			Imgbanner.setImageResource(R.drawable.urdubanner);
 			bannerNo += 1;
 
 		}else if(bannerNo == 5){
 			Log.e("On condintion"," 5");
+			PACKAGE_NAME = "com.app.LocationFinder";
 			Imgbanner.setImageResource(R.drawable.locationbanner);
 			bannerNo = 1;
 		}
@@ -196,7 +215,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
 		switch (v.getId()){
 
 			case R.id.Imgbanner:
-				final String appPackageName = "com.app.kidsbookapp"; // getPackageName() from Context or Activity object
+				final String appPackageName = PACKAGE_NAME; // getPackageName() from Context or Activity object
 				try {
 					startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
 				} catch (android.content.ActivityNotFoundException anfe) {

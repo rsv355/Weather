@@ -13,7 +13,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             ads:adSize="BANNER"
-
+            android:gravity="center"
+            android:layout_gravity="center"
             ads:adUnitId="ca-app-pub-1878227272753934/3656092808" />
 
     <LinearLayout
